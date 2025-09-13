@@ -44,6 +44,23 @@ Cancer_Detection/
         └── ...
 ```
 
+## Model Features & Performance
+
+### Custom Trained YOLOv8 Model
+The YOLOv8 model was custom trained on the BrainTumorYolov8 dataset for brain tumor detection. Below are the key performance metrics from the final epoch (20):
+
+- **Validation mAP@0.5:** 0.9028
+- **Validation mAP@0.5:0.95:** 0.6903
+- **Validation Precision:** 0.8974
+- **Validation Recall:** 0.8356
+- **Validation Box Loss:** 0.9635
+- **Validation Class Loss:** 0.7529
+- **Validation DFL Loss:** 1.2078
+
+These results indicate that the model achieves high accuracy in detecting and localizing brain tumors across the three classes (glioma, meningioma, pituitary). For detailed training curves and confusion matrices, see the plots in `yolov8_brain_tumor/exp1/`.
+
+---
+
 ## How to Use
 1. **Dataset Preparation:**
    - The dataset is organized in YOLO format under `BrainTumor/BrainTumorYolov8/` with `train`, `valid`, and `test` splits.
