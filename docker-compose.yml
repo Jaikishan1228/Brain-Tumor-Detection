@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  brain-tumor-api:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - FLASK_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  brain-tumor-web:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    command: ["streamlit", "run", "src/web_app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    restart: unless-stopped
+    depends_on:
+      - brain-tumor-api
+
+volumes:
+  models:
+  data:
+  logs:
