@@ -1,6 +1,0 @@
-train: /content/BrainTumor/BrainTumorYolov8/train/images
-val: /content/BrainTumor/BrainTumorYolov8/valid/images
-test: /content/BrainTumor/BrainTumorYolov8/test/images
-
-nc: 3
-names: ['glioma', 'meningioma', 'pituitary']
