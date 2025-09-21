@@ -64,24 +64,13 @@ These results indicate high accuracy and robust detection capability for brain t
 **Precision Curve:**
 ![Precision](yolov9_brain_tumor/exp1/BoxP_curve.png)
 
-**Recall Curve:**
-![Recall](yolov9_brain_tumor/exp1/BoxR_curve.png)
-
-**Precision-Recall Curve:**
-![PR Curve](yolov9_brain_tumor/exp1/BoxPR_curve.png)
-
 **Confusion Matrix:**
 ![Confusion Matrix](yolov9_brain_tumor/exp1/confusion_matrix.png)
 
-**Normalized Confusion Matrix:**
-![Normalized Confusion Matrix](yolov9_brain_tumor/exp1/confusion_matrix_normalized.png)
-
 **Sample Training Batch:**
 ![Train Batch 0](yolov9_brain_tumor/exp1/train_batch0.jpg)
-![Train Batch 1](yolov9_brain_tumor/exp1/train_batch1.jpg)
 
 **Sample Validation Predictions:**
-![Val Batch 0 Labels](yolov9_brain_tumor/exp1/val_batch0_labels.jpg)
 ![Val Batch 0 Predictions](yolov9_brain_tumor/exp1/val_batch0_pred.jpg)
 
 These results demonstrate the model's strong performance in detecting and localizing brain tumors. For detailed metrics, refer to `results.csv` and `results.png` in the exp1 folder.
@@ -106,6 +95,16 @@ These results demonstrate the model's strong performance in detecting and locali
 4. **Visualization:**
    - Training and validation results, confusion matrices, and sample predictions are available as images in `yolov9_brain_tumor/exp1/`.
 
+## Test the Model Online
+
+🚀 **Want to test the model on your own images?** 
+
+You can try out the trained brain tumor detection model directly in your browser without any setup! I've deployed the model on Hugging Face Spaces:
+
+**[🔗 Brain Tumor Detection Demo](https://huggingface.co/spaces/Jaikishan1428/brain_tumor_detection_using_yolov9)**
+
+Simply upload your brain scan image and get instant predictions with bounding boxes around detected tumors. The demo uses the same YOLOv9 model trained in this project.
+
 ## Requirements
 - Python 3.8+
 - ultralytics
@@ -124,3 +123,5 @@ You may use, share, or modify this project for educational and research purposes
 **GitHub:** [JaikishanNishad](https://github.com/Jaikishan1228)  
 **Contact:** jaikishannishad33@gmail.com  
 **Date:** 16th September 2025
+
+
